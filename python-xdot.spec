@@ -15,7 +15,7 @@ Url:		http://code.google.com/p/jrfonseca/wiki/XDot/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Requires:	graphviz, pygtk2.0
-BuildRequires:	python-devel
+BuildRequires:	python-setuptools, python-devel
 
 %description 
 xdot is an interactive viewer for graphs written in
