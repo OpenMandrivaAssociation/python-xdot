@@ -1,21 +1,20 @@
 %define	module	xdot
-%define name	python-%{module}
-%define version 0.4
 %define rel	git81b8d7d
-%define release %mkrel 0.%rel
+%define release 0.%rel
 
 Summary:	Interactive viewer for Graphviz dot files
-Name:		%{name}
-Version:	%{version}
+Name:		python-%{module}
+Version:	0.4
 Release:	%{release}
 Source0:	%{module}-%{version}.tar.gz
 License:	LGPLv3+
 Group:		Graphics
 Url:		http://code.google.com/p/jrfonseca/wiki/XDot/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
-Requires:	graphviz, pygtk2.0
-BuildRequires:	python-setuptools, python-devel
+Requires:	graphviz
+Requires:	pygtk2.0
+BuildRequires:	python-setuptools
+BuildRequires:	python-devel
 
 %description 
 xdot is an interactive viewer for graphs written in
@@ -32,14 +31,17 @@ application.
 %setup -q -n %{module}-%{version}
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
-
-%clean
-%__rm -rf %{buildroot}
+sed -i 's/.*egg-info$//' FILE_LIST
 
 %files -f FILE_LIST
-%defattr(-,root,root)
 %doc sample.py
 
+
+
+
+%changelog
+* Tue Jan 03 2012 Lev Givon <lev@mandriva.org> 0.4-0.git81b8d7dmdv2011.0
++ Revision: 749031
+- imported package python-xdot
 
