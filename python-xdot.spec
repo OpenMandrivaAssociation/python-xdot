@@ -27,7 +27,7 @@ the command line, or as a library embedded in your Python
 application.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -qn xdot.py-%{version}
 
 %install
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
