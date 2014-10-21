@@ -1,12 +1,11 @@
 %define	module	xdot
 %define rel	git81b8d7d
-%define release 0.%rel
 
 Summary:	Interactive viewer for Graphviz dot files
 Name:		python-%{module}
-Version:	0.4
-Release:	%{release}
-Source0:	%{module}-%{version}.tar.gz
+Version:	0.6
+Release:	1
+Source0:	https://github.com/jrfonseca/xdot.py/archive/0.6.tar.gz
 License:	LGPLv3+
 Group:		Graphics
 Url:		http://code.google.com/p/jrfonseca/wiki/XDot/
@@ -36,12 +35,3 @@ sed -i 's/.*egg-info$//' FILE_LIST
 
 %files -f FILE_LIST
 %doc sample.py
-
-
-
-
-%changelog
-* Tue Jan 03 2012 Lev Givon <lev@mandriva.org> 0.4-0.git81b8d7dmdv2011.0
-+ Revision: 749031
-- imported package python-xdot
-
