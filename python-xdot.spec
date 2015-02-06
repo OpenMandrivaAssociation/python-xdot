@@ -4,7 +4,7 @@
 Summary:	Interactive viewer for Graphviz dot files
 Name:		python-%{module}
 Version:	0.6
-Release:	1
+Release:	2
 Source0:	https://github.com/jrfonseca/xdot.py/archive/0.6.tar.gz
 License:	LGPLv3+
 Group:		Graphics
