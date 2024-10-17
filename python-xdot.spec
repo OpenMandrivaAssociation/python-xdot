@@ -8,7 +8,7 @@ Release:	1
 Source0:	https://github.com/jrfonseca/xdot.py/archive/%{version}.tar.gz
 License:	LGPLv3+
 Group:		Graphics
-Url:		http://code.google.com/p/jrfonseca/wiki/XDot/
+Url:		https://code.google.com/p/jrfonseca/wiki/XDot/
 BuildArch:	noarch
 Requires:	graphviz
 Requires:	pygtk2.0
